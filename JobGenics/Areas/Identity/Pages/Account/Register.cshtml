@@ -1,0 +1,120 @@
+﻿@page
+@model RegisterModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobgenics - หางานชั้นแนวหน้ากับเรา</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/JobgenicsStyle.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="~/lib/bootstrap/dist/images/jobgenics-favicon.png" sizes="32x32" />
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+
+        <div class="container py-5 mb-3" style="color: #f9fcff;">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6 d-flex align-items-center bg-primary">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <h5 class="mb-4 text-center">สร้างบัญชีผู้ใช้กับ JOBGENICS</h5>
+                                    <p class="text-center" style="font-size:14px;">สร้างบัญชีผู้ใช้ใหม่ เพื่อใช้บริการจัดหางานกับเรา</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center bg-white border">
+                                <div class="card-body p-md-4 mx-md-4">
+                                    <div class="text-center mt-4 mb-4">
+                                        <img src="~/lib/bootstrap/dist/images/Jobgenics_Logo.png" />
+                                    </div>
+                                    <div class="mb-4 mt-4 text-center">
+                                        <h5>สร้างบัญชีผู้ใช้</h5>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-white">
+                                                    <span class="fa fa-user-secret" style="color: #1b6ec2;"></span>
+                                                </span>
+                                            </div>
+                                            <input type="text" id="form1Example13" class="form-control form-control-md" placeholder="ชื่อ-นามสกุล" required="required" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-white">
+                                                    <span class="fa fa-envelope" style="color: #1b6ec2;"></span>
+                                                </span>
+                                            </div>
+                                            <input type="email" id="form1Example23" class="form-control form-control-md" placeholder="อีเมล์" required="required" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-white">
+                                                    <span class="fa fa-user" style="color: #1b6ec2;"></span>
+                                                </span>
+                                            </div>
+                                            <input type="text" id="form1Example23" class="form-control form-control-md" placeholder="ชื่อผู้ใช้" required="required" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-white">
+                                                    <i class="fa fa-key" aria-hidden="true" style="color: #1b6ec2;"></i>
+                                                </span>
+                                            </div>
+                                            <input type="password" id="form1Example23" class="form-control form-control-md" placeholder="รหัสผ่าน" required="required" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-white">
+                                                    <i class="fa fa-key" aria-hidden="true" style="color: #1b6ec2;"></i>
+                                                </span>
+                                            </div>
+                                            <input type="password" id="form1Example23" class="form-control form-control-md" placeholder="ยืนยันรหัสผ่าน" required="required" />
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-3 pb-1">
+                                        <span><a class="btn btn-primary btn-block bg-primary mb-3" href="#">สร้างบัญชีผู้ใช้</a></span>
+                                        <span><a class="text-muted mr-2">มีบัญชีผู้ใช้แล้วใช่มั๊ย?<a href="~/Identity/Account/Login">เข้าสู่ระบบ</a></a></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

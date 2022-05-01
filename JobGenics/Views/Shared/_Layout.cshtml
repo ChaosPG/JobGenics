@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobgenics - หางานชั้นแนวหน้ากับเรา</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b837f95cc.js" crossorigin="anonymous"></script>
+    <link href="~/lib/bootstrap/dist/css/JobgenicsStyle.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="~/lib/bootstrap/dist/images/jobgenics-favicon.png" sizes="32x32"/>
+</head>
+<body>
+    <header>
+
+        <nav class="shadow-sm navbar navbar-expand-md navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="~/Home/Index"><img src="~/lib/bootstrap/dist/images/Jobgenics_Logo.png" /></a>
+                <partial name="_LoginPartial.cshtml" />
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container-fluid">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="container-fluid">
+        <!-- Footer -->
+        <footer class="text-center" style="background-color: #deeaf9;">
+            <!-- Grid container -->
+            <div class="container p-5">
+                @*<section class="mb-4">
+            <p>
+                Jobgenics ประกอบด้วยทีมงานคุณภาพ เป็นเว็บไซด์หางานที่มีตำแหน่งงานมากมายกว่า 9,000 ตำแหน่ง สมาชิกกว่า 300,000 คน เต็มไปด้วยบริษัทชั้นนำของไทย
+            </p>
+        </section>*@
+                <!-- Section: Text -->
+                <!-- Section: Links -->
+                <div class="row mb-5">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-left">
+                        <img src="~/lib/bootstrap/dist/images/Jobgenics_Logo.png" /><br /><br />
+                        <a>Jobgenics ประกอบด้วยทีมงานคุณภาพ เป็นเว็บไซด์หางานที่มีตำแหน่งงานมากมายกว่า 9,000 ตำแหน่ง สมาชิกกว่า 300,000 คน เต็มไปด้วยบริษัทชั้นนำของไทย</a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-left">
+                        <h6 class="text-uppercase">เกี่ยวกับเรา</h6>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#">ข้อมูลบริษัท</a>
+                            </li>
+                            <li>
+                                <a href="#">ติดต่อเรา</a>
+                            </li>
+                            <li>
+                                <a href="#">นโยบายความเป็นส่วนตัว</a>
+                            </li>
+                            <li>
+                                <a href="#">การตั้งค่าคุกกี้</a>
+                            </li>
+                            <li>
+                                <a href="#">ข้อกำหนด</a>
+                            </li>
+                            <li>
+                                <a href="#">Sitemap (แผนผังเว็บไซต์)</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0"></div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h6 class="text-uppercase mb-2">Mobile App</h6>
+                        <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg" alt="Download on the App Store" height="45">
+                        <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png" alt="Get it on Google Play" height="45">
+                    </div>
+                </div>
+                <hr />
+                <section class="mb-3 mt-5">
+                    <form action="">
+                        <!--Grid row-->
+                        <div class="row d-flex justify-content-center">
+                            <!--Grid column-->
+                            <div class="col-auto">
+                                <p class="pt-2">
+                                    <strong>ติดตาม Jobgenics</strong>
+                                </p>
+                            </div>
+                            <div class="col-md-5 col-12">
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="form5Example2" class="form-control" placeholder="อีเมล์ของคุณ" />
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary btn-icon mr-2 rounded-pill">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <!-- Section: Social media -->
+                <section class="mb-1">
+                    <button type="button" class="btn btn-outline-secondary btn-icon mr-2"> <i class="fab fa-facebook-f"></i> </button>
+                    <button type="button" class="btn btn-outline-secondary btn-icon mr-2"> <i class="fab fa-twitter"></i> </button>
+                    <button type="button" class="btn btn-outline-secondary btn-icon mr-2"> <i class="fab fa-google"></i> </button>
+                    <button type="button" class="btn btn-outline-secondary btn-icon mr-2"> <i class="fab fa-instagram"></i> </button>
+                    <button type="button" class="btn btn-outline-secondary btn-icon mr-2"> <i class="fab fa-linkedin-in"></i> </button>
+                    <button type="button" class="btn btn-outline-secondary btn-icon mr-2"> <i class="fab fa-github"></i> </button>
+                </section>
+            </div>
+
+            <div class="container">
+                <div class="text-center p-3">
+                    <a>© 2022 Jobgenics All rights reserved.</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

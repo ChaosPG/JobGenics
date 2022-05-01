@@ -1,0 +1,515 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jobgenics - หางานชั้นแนวหน้ากับเรา</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/JobgenicsStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <div class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mt-5 mb-5 pl-xl-5">
+                    <h1 class="text-left">
+                        หางานเพื่อเพิ่มคุณค่าให้ชีวิต
+                    </h1>
+                    <a class="text-left" style="font-size:18px;">
+                        Jobgenic เว็บไซด์บริการหางานเต็มรูปแบบ มีคำแนะนำที่ทำให้คุณหางานได้อย่างมีประสิทธิภาพ หางานกับบริษัทชั้นนำของไทย
+                    </a>
+
+                    <div class="input-group rounded-circle mx-auto my-xl-5">
+                        <div class="input-group">
+                            <input type="text" size="30" class="form-control mr-md-1" placeholder="ค้นหางานที่ใช่" aria-label="Search" aria-describedby="search-addon" />
+                            <div class="input-group-prepend border-0">
+                                <span class="input-group-text bg-white" id="basic-addon1"><i class="fas fa-map-marker-alt" style="color: #1b6ec2;"></i></span>
+                            </div>
+                            @*<input type="text" size="20" class="form-control mr-md-1" placeholder="กรุงเทพมหานคร" aria-label="Search" aria-describedby="search-addon" />*@
+                            <select name="province" class="form-control mr-md-1" aria-label="Search" aria-describedby="search-addon">
+                                <option value="กรุงเทพมหานคร" selected>กรุงเทพมหานคร</option>
+                                <option value="กระบี่">กระบี่ </option>
+                                <option value="กาญจนบุรี">กาญจนบุรี </option>
+                                <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                                <option value="กำแพงเพชร">กำแพงเพชร </option>
+                                <option value="ขอนแก่น">ขอนแก่น</option>
+                                <option value="จันทบุรี">จันทบุรี</option>
+                                <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                                <option value="ชัยนาท">ชัยนาท </option>
+                                <option value="ชัยภูมิ">ชัยภูมิ </option>
+                                <option value="ชุมพร">ชุมพร </option>
+                                <option value="ชลบุรี">ชลบุรี </option>
+                                <option value="เชียงใหม่">เชียงใหม่ </option>
+                                <option value="เชียงราย">เชียงราย </option>
+                                <option value="ตรัง">ตรัง </option>
+                                <option value="ตราด">ตราด </option>
+                                <option value="ตาก">ตาก </option>
+                                <option value="นครนายก">นครนายก </option>
+                                <option value="นครปฐม">นครปฐม </option>
+                                <option value="นครพนม">นครพนม </option>
+                                <option value="นครราชสีมา">นครราชสีมา </option>
+                                <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                                <option value="นครสวรรค์">นครสวรรค์ </option>
+                                <option value="นราธิวาส">นราธิวาส </option>
+                                <option value="น่าน">น่าน </option>
+                                <option value="นนทบุรี">นนทบุรี </option>
+                                <option value="บึงกาฬ">บึงกาฬ</option>
+                                <option value="บุรีรัมย์">บุรีรัมย์</option>
+                                <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                                <option value="ปทุมธานี">ปทุมธานี </option>
+                                <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                                <option value="ปัตตานี">ปัตตานี </option>
+                                <option value="พะเยา">พะเยา </option>
+                                <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                                <option value="พังงา">พังงา </option>
+                                <option value="พิจิตร">พิจิตร </option>
+                                <option value="พิษณุโลก">พิษณุโลก </option>
+                                <option value="เพชรบุรี">เพชรบุรี </option>
+                                <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                                <option value="แพร่">แพร่ </option>
+                                <option value="พัทลุง">พัทลุง </option>
+                                <option value="ภูเก็ต">ภูเก็ต </option>
+                                <option value="มหาสารคาม">มหาสารคาม </option>
+                                <option value="มุกดาหาร">มุกดาหาร </option>
+                                <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                                <option value="ยโสธร">ยโสธร </option>
+                                <option value="ยะลา">ยะลา </option>
+                                <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                                <option value="ระนอง">ระนอง </option>
+                                <option value="ระยอง">ระยอง </option>
+                                <option value="ราชบุรี">ราชบุรี</option>
+                                <option value="ลพบุรี">ลพบุรี </option>
+                                <option value="ลำปาง">ลำปาง </option>
+                                <option value="ลำพูน">ลำพูน </option>
+                                <option value="เลย">เลย </option>
+                                <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                                <option value="สกลนคร">สกลนคร</option>
+                                <option value="สงขลา">สงขลา </option>
+                                <option value="สมุทรสาคร">สมุทรสาคร </option>
+                                <option value="สมุทรปราการ">สมุทรปราการ </option>
+                                <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                                <option value="สระแก้ว">สระแก้ว </option>
+                                <option value="สระบุรี">สระบุรี </option>
+                                <option value="สิงห์บุรี">สิงห์บุรี </option>
+                                <option value="สุโขทัย">สุโขทัย </option>
+                                <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                                <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                                <option value="สุรินทร์">สุรินทร์ </option>
+                                <option value="สตูล">สตูล </option>
+                                <option value="หนองคาย">หนองคาย </option>
+                                <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                                <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                                <option value="อุดรธานี">อุดรธานี </option>
+                                <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                                <option value="อุทัยธานี">อุทัยธานี </option>
+                                <option value="อุบลราชธานี">อุบลราชธานี</option>
+                                <option value="อ่างทอง">อ่างทอง </option>
+                            </select>
+
+                            <span class="input-group-append bg-white border-left-0">
+                                <a class="btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="~/lib/bootstrap/dist/images/login-right-bg-2.jpg" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow-sm p-5 mt-auto rounded" style="background-color: #f9fcff; ">
+        <div class="container">
+            <h2 class="text-center">หางานตามหมวดหมู่</h2>
+            <p class="text-center">หมวดหมู่ที่ได้รับความนิยมมากที่สุด</p>
+
+            <div class="row bg-white">
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-primary btn-rounded btn-icon"> <i class="fas fa-donate fa-2x"></i> </button>
+                        </div>
+                        <h4>การเงิน</h4>
+                        <p>(5342 ตำแหน่ง)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-warning btn-rounded btn-icon"> <i class="fas fa-store fa-2x"></i> </button>
+                        </div>
+                        <h4>การขาย/การตลาด</h4>
+                        <p>(4678 ตำแหน่ง)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-success btn-rounded btn-icon"> <i class="fas fa-desktop fa-2x"></i> </button>
+                        </div>
+                        <h4>เทคโนโลยี</h4>
+                        <p>(3890 ตำแหน่ง)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-info btn-rounded btn-icon"> <i class="fa-solid fa-school fa-2x"></i> </button>
+                        </div>
+                        <h4>การศึกษา</h4>
+                        <p>(3152 ตำแหน่ง)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row bg-white">
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-success btn-rounded btn-icon"> <i class="fas fa-palette fa-2x"></i> </button>
+                        </div>
+                        <h4>ศิลปะ/การออกแบบ</h4>
+                        <p>(2894 ตำแหน่ง)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-danger btn-rounded btn-icon"> <i class="fas fa-heartbeat fa-2x"></i> </button>
+                        </div>
+                        <h4>สุขภาพ</h4>
+                        <p>(2230 ตำแหน่ง)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-primary btn-rounded btn-icon"> <i class="fas fa-microscope fa-2x"></i></button>
+                        </div>
+                        <h4>วิทยาศาสตร์</h4>
+                        <p>(1821 ตำแหน่ง)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 border div-most-job">
+                    <div class="text-center mt-4 mb-4">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-info btn-rounded btn-icon"> <i class="fas fa-hamburger fa-2x"></i> </button>
+                        </div>
+                        <h4>อาหาร</h4>
+                        <p>(1254 ตำแหน่ง)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow-sm p-5 mt-auto rounded" style="background-color: white; ">
+        <div class="container">
+            <h2 class="text-center">งานเด่น</h2>
+            <p class="text-center">แสดงงานตามความนิยมและรายได้</p>
+
+            <div class="row">
+                <div class="shadow-sm column-2 rounded-0 hover-left-blue">
+                    <div class="row"> 
+                        <div class="col-sm-3 text-center mt-2"><img src="~/lib/bootstrap/dist/images/icons/Company_icon.png" /></div>
+                        <div class="col-sm-9 text-left">
+                            <h4 class="font-weight-bold">Software Engineer</h4>
+                            <p>DreamTech</p>
+                            <p style="font-size:14px; color:grey">
+                                <i class="fas fa-map-marker-alt pr-1" style="color: #28a745 "></i> ขอนแก่น
+                                <i class="fa fa-user pr-1" style="color: #28a745 "></i>ธนา อภิรักษ์
+                            </p>
+                            <a class="btn btn-success btn-sm font-weight-normal rounded-pill pl-4 pr-4 disabled" style="color:white;">Full-Time</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow-sm column-2 section-column rounded-0 hover-left-green">
+                    <div class="row">
+                        <div class="col-sm-3 text-center mt-2"><img src="~/lib/bootstrap/dist/images/icons/Company_icon.png" /></div>
+                        <div class="col-sm-9 text-left">
+                            <h4 class="font-weight-bold">Graphic Designer</h4>
+                            <p>DreamTech</p>
+                            <p style="font-size:14px; color:grey">
+                                <i class="fas fa-map-marker-alt pr-1" style="color: #28a745 "></i> นครราชสีมา
+                                <i class="fa fa-user pr-1" style="color: #28a745 "></i>พัธนันท์ ทรงไชย
+                            </p>
+                            <a class="btn btn-warning btn-sm font-weight-normal rounded-pill pl-4 pr-4 disabled" style="color:white;">Part-Time</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-sm column-2 section-column rounded-0 hover-left-red">
+                    <div class="row">
+                        <div class="col-sm-3 text-center mt-2"><img src="~/lib/bootstrap/dist/images/icons/Company_icon.png" /></div>
+                        <div class="col-sm-9 text-left">
+                            <h4 class="font-weight-bold">Managing Director</h4>
+                            <p>DreamTech</p>
+                            <p style="font-size:14px; color:grey">
+                                <i class="fas fa-map-marker-alt pr-1" style="color: #28a745 "></i> เชียงใหม่
+                                <i class="fa fa-user pr-1" style="color: #28a745 "></i>คุณวุฒิ คนานุกร
+                            </p>
+                            <a class="btn btn-success btn-sm font-weight-normal rounded-pill pl-4 pr-4 disabled" style="color:white;">Full-Time</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="shadow-sm column-2 rounded-0 hover-left-blue">
+                    <div class="row">
+                        <div class="col-sm-3 text-center mt-2"><img src="~/lib/bootstrap/dist/images/icons/Company_icon.png" /></div>
+                        <div class="col-sm-9 text-left">
+                            <h4 class="font-weight-bold">Software Engineer</h4>
+                            <p>DreamTech</p>
+                            <p style="font-size:14px; color:grey">
+                                <i class="fas fa-map-marker-alt pr-1" style="color: #28a745 "></i> กรุงเทพมหานคร
+                                <i class="fa fa-user pr-1" style="color: #28a745 "></i>วราพร อนันตไชย
+                            </p>
+                            <a class="btn btn-success btn-sm font-weight-normal rounded-pill pl-4 pr-4 disabled" style="color:white;">Full-Time</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shadow-sm column-2 section-column rounded-0 hover-left-green">
+                    <div class="row">
+                        <div class="col-sm-3 text-center mt-2"><img src="~/lib/bootstrap/dist/images/icons/Company_icon.png" /></div>
+                        <div class="col-sm-9 text-left">
+                            <h4 class="font-weight-bold">Graphic Designer</h4>
+                            <p>DreamTech</p>
+                            <p style="font-size:14px; color:grey">
+                                <i class="fas fa-map-marker-alt pr-1" style="color: #28a745 "></i> ระยอง
+                                <i class="fa fa-user pr-1" style="color: #28a745 "></i>อำนาจ บุญลือ
+                            </p>
+                            <a class="btn btn-warning btn-sm font-weight-normal rounded-pill pl-4 pr-4 disabled" style="color:white;">Part-Time</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-sm column-2 section-column rounded-0 hover-left-red">
+                    <div class="row">
+                        <div class="col-sm-3 text-center mt-2"><img src="~/lib/bootstrap/dist/images/icons/Company_icon.png" /></div>
+                        <div class="col-sm-9 text-left">
+                            <h4 class="font-weight-bold">Managing Director</h4>
+                            <p>DreamTech</p>
+                            <p style="font-size:14px; color:grey">
+                                <i class="fas fa-map-marker-alt pr-1" style="color: #28a745 "></i> สงขลา
+                                <i class="fa fa-user pr-1" style="color: #28a745 "></i>นิภาพร วรารักษ์
+                            </p>
+                            <a class="btn btn-success btn-sm font-weight-normal rounded-pill pl-4 pr-4 disabled" style="color:white;">Full-Time</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mt-5 text-center">
+                <button type="button" class="btn btn-outline-primary btn-icon rounded-pill pl-4 pr-4"> ดูงานทั้งหมด </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 mt-auto rounded" style="background-color: #f9fcff; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <h2>งานทั้งหมดกว่า 9,000 งาน</h2>
+                    <p>
+                        ค้นหาตำแหน่งที่เปิดทั้งหมดบนเว็บ รับประมาณการเงินเดือนส่วนบุคคลของคุณเอง
+                        อ่านบทวิจารณ์จากบริษัทกว่า 6,000 แห่งทั่วไทย งานที่เหมาะสมอยู่ที่นั่น
+                    </p>
+                    <div class="mt-5 mb-5">
+                        <button type="button" class="btn btn-outline-primary btn-icon rounded-pill pl-4 pr-4"> ค้นหางาน </button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="~/lib/bootstrap/dist/images/search-job-banner.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 mt-auto rounded" style="background-color: #ffffff; ">
+        <div class="container">
+            <h2 class="text-center">ขั้นตอนการใช้งาน</h2>
+            <p class="text-center">
+                ขั้นตอนการใช้งานเว็บไซด์
+            </p>
+
+            <div class="row">
+                <div class="col-md-4 p-3 text-center">
+                    <i class="fa fa-user fa-3x p-2" style="color: #1b6ec2;"></i>
+                    <p>
+                        ลงประกาศงานเพื่อบอกเราเกี่ยวกับโครงการของคุณ
+                        เราจะจับคู่คุณกับนักแปลอิสระที่เหมาะสมและค้นหาสถานที่ที่ดีที่สุดได้อย่างรวดเร็ว
+                    </p>
+                </div>
+                <div class="col-md-4 p-3 text-center">
+                    <i class="fa fa-search fa-3x p-2" style="color: #1b6ec2;"></i>
+                    <p>
+                        ลงประกาศงานเพื่อบอกเราเกี่ยวกับโครงการของคุณ
+                        เราจะจับคู่คุณกับนักแปลอิสระที่เหมาะสมและค้นหาสถานที่ที่ดีที่สุดได้อย่างรวดเร็ว
+                    </p>
+                </div>
+                <div class="col-md-4 p-3 text-center">
+                    <i class="fa fa-trophy fa-3x p-2" style="color: #1b6ec2;"></i>
+                    <p>
+                        ลงประกาศงานเพื่อบอกเราเกี่ยวกับโครงการของคุณ
+                        เราจะจับคู่คุณกับนักแปลอิสระที่เหมาะสมและค้นหาสถานที่ที่ดีที่สุดได้อย่างรวดเร็ว
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 mt-auto rounded" style="background-color: #f9fcff; ">
+        <div class="container">
+            <h2 class="text-center">อัตราค่าบริการ</h2>
+            <p class="text-center">
+                มีให้เลือกหลากหลายราคา
+            </p>
+
+            <div class="row">
+                <div class="column-2 shadow-sm rounded bg-white price-top-color-1">
+                    <div class="text-center p-2">
+                        <i class="fa-solid fa-square-poll-vertical fa-3x p-2" style="color: #1b6ec2;"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <h4 class="font-weight-bold">Professional</h4>
+                        <div class="text-center">
+                            <a class="font-weight-normal">โพสได้ 1 งาน</a><br />
+                            <a class="font-weight-normal">ไม่มีงานเด่น</a><br />
+                            <a class="font-weight-normal">ปรับแต่งรายการ งานของคุณ</a><br />
+                            <a class="font-weight-normal">จัดการ Application</a><br />
+                            <a class="font-weight-normal">หมดอายุ ใน 30 วัน</a><br />
+                        </div>
+                        <div class="text-center p-2">
+                            <h3 class="font-weight-bold">฿&nbsp;0/Month</h3>
+                        </div>
+                        <div class="mt-1 mb-2">
+                            <button type="button" class="btn btn-outline-primary btn-icon rounded-pill pl-4 pr-4"> เริ่มใช้งาน </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-2 shadow-sm rounded bg-white price-top-color-2">
+                    <div class="text-center p-2">
+                        <i class="fa-solid fa-chart-pie fa-3x p-2" style="color: #1b6ec2;"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <h4 class="font-weight-bold">Advance</h4>
+                        <div class="text-center">
+                            <a class="font-weight-normal">โพสได้ 1 งาน</a><br />
+                            <a class="font-weight-normal">ไม่มีงานเด่น</a><br />
+                            <a class="font-weight-normal">ปรับแต่งรายการ งานของคุณ</a><br />
+                            <a class="font-weight-normal">จัดการ Application</a><br />
+                            <a class="font-weight-normal">หมดอายุ ใน 30 วัน</a><br />
+                        </div>
+                        <div class="text-center p-2">
+                            <h3 class="font-weight-bold">฿&nbsp;600/Month</h3>
+                        </div>
+                        <div class="mt-1 mb-2">
+                            <button type="button" class="btn btn-outline-primary btn-icon rounded-pill pl-4 pr-4"> เริ่มใช้งาน </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column-2 shadow-sm rounded bg-white price-top-color-3">
+                    <div class="text-center p-2">
+                        <i class="fa fa-briefcase fa-3x p-2" style="color: #1b6ec2;"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <h4 class="font-weight-bold">Premium</h4>
+                        <div class="text-center">
+                            <a class="font-weight-normal">โพสได้ 1 งาน</a><br />
+                            <a class="font-weight-normal">ไม่มีงานเด่น</a><br />
+                            <a class="font-weight-normal">ปรับแต่งรายการ งานของคุณ</a><br />
+                            <a class="font-weight-normal">จัดการ Application</a><br />
+                            <a class="font-weight-normal">หมดอายุ ใน 30 วัน</a><br />
+                        </div>
+                        <div class="text-center p-2">
+                            <h3 class="font-weight-bold">฿&nbsp;1200/Month</h3>
+                        </div>
+                        <div class="mt-1 mb-2">
+                            <button type="button" class="btn btn-outline-primary btn-icon rounded-pill pl-4 pr-4"> เริ่มใช้งาน </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-5 mt-auto rounded" style="background-color: #ffffff; ">
+        <div class="container">
+            <h2 class="text-center">เสียงตอบรับจากลูกค้า</h2>
+            <p class="text-center">
+                เสียงตอบรับจากลูกค้า จากการใช้เว็บไซด์ของเรา
+            </p>
+
+            <div class="col-md-12">
+                <div class="text-center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner border">
+                            <div class="carousel-item active">
+                                <div class="col-md-12 text-center p-2 mt-3">
+                                    <img src="~/lib/bootstrap/dist/images/icons/man(1).png" />
+                                </div>
+                                <div class="col-md-12 p-3">
+                                    <a class="text-center">
+                                        เป็นเว็บที่ใช้งานง่าย บริการรวดเร็ว
+                                    </a><br />
+                                    @*<a>
+                                        Review 1 Review 1 Review 1 Review 1 Review 1 Review 1 Review 1
+                                    </a><br />*@
+                                    <a class="text-center font-weight-bold" style="font-size:18px;">ปฏิเวธ สัตยาวัฒน์</a><br />
+                                    <a class="text-center">Software Engineer</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item bg-white">
+                                <div class="col-md-12 text-center p-2 mt-3">
+                                    <img src="~/lib/bootstrap/dist/images/icons/profile.png" />
+                                </div>
+                                <div class="col-md-12 p-3">
+                                    <a class="text-center">
+                                        เป็นเว็บที่เต็มไปด้วยบริษัทคุณภาพ
+                                    </a><br />
+
+                                    <a class="text-center font-weight-bold" style="font-size:18px;">คงฤทธิ์ อภิพรชัย</a><br />
+                                    <a class="text-center">Software Engineer</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item bg-white">
+                                <div class="col-md-12 text-center p-2 mt-3">
+                                    <img src="~/lib/bootstrap/dist/images/icons/user.png" />
+                                </div>
+                                <div class="col-md-12 p-3">
+                                    <a class="text-center">
+                                        ตำแหน่งงานหลากหลาย ค่าบริการไม่แพงเกินไป
+                                    </a><br />
+
+                                    <a class="text-center font-weight-bold" style="font-size:18px;">รัตนาพร ธนาวุฒิ</a><br />
+                                    <a class="text-center">Graphic Designer</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators p-2">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
